@@ -33,6 +33,7 @@
     function Courier(name) {
         if(typeof name !== 'string' || !name) return null;
         if(couriers[name]) return couriers[name];
+        if(!(this instanceof Courier)) return Courier.train(name);
 
         couriers[name] = this;
         this.name = name;
