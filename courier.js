@@ -16,11 +16,6 @@
 
     var couriers = {};
 
-    var isCourier = function(o) { 
-        if(o.toString().toLowerCase() === '[object object]') return true;
-        return false;
-    };
-
     /**
      * Courier class, with silly rpg-style method names to
      * obfuscate understanding of the code.
