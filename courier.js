@@ -11,7 +11,7 @@
     else if(typeof define ==='function' && define.amd) define(definition);
     else context[name] = definition();
 })('Courier', this, function() {
-    // allow console use
+    // avoid bad consoles
     window.console = window.console || { log: function() {} };
 
     var couriers = {};
