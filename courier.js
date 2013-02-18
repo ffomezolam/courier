@@ -11,9 +11,6 @@
     else if(typeof define ==='function' && define.amd) define(definition);
     else context[name] = definition();
 })('Courier', this, function() {
-    // avoid bad consoles
-    window.console = window.console || { log: function() {} };
-
     var couriers = {};
 
     /**
@@ -31,7 +28,18 @@
         if(!(this instanceof Courier)) return Courier.train(name);
 
         couriers[name] = this;
+
+        /**
+         * Courier name
+         * @property
+         * @private
+         */
         this.name = name;
+        /**
+         * List of this courier's routes
+         * @property
+         * @private
+         */
         this.routes = {};
     }
 
@@ -103,7 +111,7 @@
             if(!context) context = null;
             var route = this.routes[name];
             for(var l = route.length, r = l - 1; r >= 0; r--) {
-                if(!method || (route[r].method === method && route[r].context === context)) {
+                if( !method || (route[r].method === method && route[r].context === context)) {
                     route.splice(r, 1);
                     return this;
                 }
@@ -122,7 +130,7 @@
          */
         deliver: function(name /* arguments */) {
             if(!name || !this.routes[name]) return this;
-            var args = Array.prototype.slice.call(arguments, 1);
+            var args  = Array.prototype.slice.call(arguments, 1);
             var route = this.routes[name];
             for(var i = 0; i < route.length; i++) {
                 route[i].method.apply(route[i].context, args);
