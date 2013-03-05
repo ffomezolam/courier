@@ -3,8 +3,6 @@
  *
  * @module courier
  * @author Andrew Malozemoff
- *
- * @requires Silverlight wmvplayer
  */
 (function(name, context, definition) {
     if(typeof module !== 'undefined' && module.exports) module.exports = definition();
