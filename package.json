@@ -1,0 +1,17 @@
+{
+  "name": "courier",
+  "version": "0.1.0",
+  "description": "Basic observer pattern",
+  "main": "courier.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/ffomezolam/courier.git"
+  },
+  "author": "Andrew Malozemoff",
+  "license": "BSD",
+  "gitHead": "05b70afd75e7d83770ba7a84737f9e4df0d7ab9a",
+  "readmeFilename": "README.md"
+}
