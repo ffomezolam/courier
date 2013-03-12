@@ -18,7 +18,7 @@
      * @class Courier
      * @constructor
      * @param {String} name Courier name
-     * @returns {Courier} A new or existing courier
+     * @return {Courier} A new or existing courier
      */
     function Courier(name) {
         if(typeof name !== 'string' || !name) return null;
@@ -57,7 +57,7 @@
      * @method train
      * @static
      * @param {String} name Courier name
-     * @returns {Courier} The Courier object
+     * @return {Courier} The Courier object
      */
     Courier.train = function(name) {
         if(!couriers[name]) couriers[name] = new Courier(name);
@@ -70,7 +70,7 @@
      * @method hire
      * @static
      * @param {String} name Courier name
-     * @returns {Courier} The Courier
+     * @return {Courier} The Courier
      */
     Courier.hire = function(name) {
         return couriers[name] || null;
